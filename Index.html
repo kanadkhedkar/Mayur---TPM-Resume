@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayur Kanadkhedkar - Resume</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; color:#333; }
+    a { text-decoration:none; color:inherit; }
+
+    /* Layout */
+    .container { display:flex; min-height:100vh; }
+    nav { width:250px; background-color:#1F4E79; color:#fff; padding:20px; position:fixed; height:100%; overflow-y:auto; transition:0.3s; }
+    nav h2 { text-align:center; font-size:1.5em; margin-bottom:20px; }
+    nav ul { list-style:none; }
+    nav ul li { margin:15px 0; cursor:pointer; transition:0.3s; }
+    nav ul li:hover { color:#FFD700; }
+    
+    main { margin-left:250px; flex:1; padding:30px; transition:0.3s; }
+
+    section { margin-bottom:40px; opacity:0; transform:translateY(30px); transition:all 0.8s ease; }
+    section.visible { opacity:1; transform:translateY(0); }
+    h1,h2,h3 { color:#1F4E79; margin-bottom:10px; }
+    h1 { font-size:2em; margin-bottom:5px; }
+    h2 { font-size:1.5em; border-bottom:2px solid #1F4E79; padding-bottom:5px; margin-bottom:15px; }
+    h3 { font-size:1.2em; margin-top:15px; margin-bottom:8px; }
+
+    ul { padding-left:20px; margin-bottom:10px; }
+    li { margin-bottom:5px; line-height:1.5; }
+
+    /* Contact Info */
+    .contact-info p { margin:5px 0; }
+
+    /* Skills tags */
+    .skills { display:flex; flex-wrap:wrap; margin-top:10px; }
+    .skill-tag { background-color:#1F4E79; color:#fff; padding:5px 10px; border-radius:15px; margin:5px 5px 0 0; font-size:0.9em; }
+
+    /* Hover animations */
+    li:hover { transform:translateX(5px); transition:0.3s; }
+
+    /* Download button */
+    .download-btn { display:inline-block; background-color:#FFD700; color:#1F4E79; padding:10px 20px; border-radius:5px; font-weight:bold; margin-bottom:20px; cursor:pointer; transition:0.3s; }
+    .download-btn:hover { background-color:#e6c200; }
+
+    /* Hamburger menu for mobile */
+    .hamburger { display:none; font-size:1.5em; cursor:pointer; margin-bottom:20px; }
+    @media (max-width:768px){
+        nav { position:fixed; width:200px; left:-220px; top:0; height:100%; z-index:1000; transition:0.3s; }
+        nav.active { left:0; }
+        main { margin-left:0; padding:20px; }
+        .hamburger { display:block; color:#1F4E79; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <nav id="sidebar">
+        <h2>Mayur Kanadkhedkar</h2>
+        <ul>
+            <li onclick="scrollToSection('summary')">Summary</li>
+            <li onclick="scrollToSection('skills')">Skills</li>
+            <li onclick="scrollToSection('experience')">Experience</li>
+            <li onclick="scrollToSection('education')">Education</li>
+            <li onclick="scrollToSection('certifications')">Certifications</li>
+            <li><a href="mailto:mmk9718@gmail.com">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <main id="resumeContent">
+        <div class="hamburger" onclick="toggleSidebar()">☰ Menu</div>
+
+        <!-- Download Button -->
+        <div>
+            <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+        </div>
+
+        <!-- Summary -->
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Senior IT Program Leader with 15+ years of experience leading global digital transformation initiatives in Banking and Life Sciences. Adept at driving portfolio growth, fostering stakeholder relationships, and leading cross-functional teams in both traditional and Agile environments. Proven expertise in Scrum Mastery, Agile coaching, and servant leadership, guiding teams from initiation to high performance within SAFe and Scrum frameworks. Core strengths include Program Management, IT Strategy, Life Sciences, and BFSI, complemented by a strong foundation in project/program management, budgeting, risk mitigation, and compliance. Certified in PMP, PSM, and AWS-CCP, with hands-on experience in Agile, Scaled Agile, Scrum, and Waterfall methodologies. Consistently driving business success through strategic leadership, continuous improvement, and stakeholder alignment.</p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-tag">Program Management & Governance</div>
+                <div class="skill-tag">IT Strategy and Roadmap Development</div>
+                <div class="skill-tag">Cloud Migration (On-Prem to GCP)</div>
+                <div class="skill-tag">API Development & Data Integration</div>
+                <div class="skill-tag">Technical Project Management</div>
+                <div class="skill-tag">Budgeting & Resource Allocation</div>
+                <div class="skill-tag">Agile, SAFe, Scrum, Waterfall</div>
+                <div class="skill-tag">Enterprise Portfolio Management</div>
+                <div class="skill-tag">Cross-Functional Leadership</div>
+                <div class="skill-tag">Global Team Management (Onsite-Offshore)</div>
+                <div class="skill-tag">Executive Stakeholder Engagement</div>
+                <div class="skill-tag">Coaching & Mentoring High Performing Teams</div>
+                <div class="skill-tag">Risk, Issue & Dependency Management</div>
+                <div class="skill-tag">JIRA, Confluence, Smartsheet, Monday.com</div>
+                <div class="skill-tag">Microsoft 365 Suite</div>
+                <div class="skill-tag">C#, Python, JS, HTML, CSS, SQL</div>
+                <div class="skill-tag">AWS, GCP, Microservices</div>
+                <div class="skill-tag">Drupal, Adobe Omniture, Google Analytics</div>
+                <div class="skill-tag">GTM, Docker</div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <h3>Program Manager (Delivery & Modernization) | 06/2022 - Current</h3>
+            <p>Iris Software Inc - New York, USA (Client: Two Large Banks)</p>
+            <ul>
+                <li>Led a cross-continental delivery structure with 4 TPMs, overseeing ~50 team members across dev, QA, and architecture, delivering enhancements to a regulated trading platform.</li>
+                <li>Personally oversaw and drove delivery for four key initiatives:</li>
+                <ul>
+                    <li>API integration program for two-way KYC data exchange across 90+ global markets.</li>
+                    <li>UI/UX redesign of the KYC application to improve user efficiency.</li>
+                    <li>POC for on-prem to GCP migration (year-long) for client proprietary trading platform.</li>
+                    <li>Oracle to Postgres DB migration (4-month initiative).</li>
+                </ul>
+                <li>Facilitated PI Planning, sprint cadences, Scrum of Scrums, and delivery governance.</li>
+                <li>Delivered stakeholder reporting and dashboards using JIRA, Confluence, and other tools.</li>
+                <li>Navigated compliance constraints and aligned global teams with business priorities.</li>
+            </ul>
+
+            <h3>Delivery Manager – Digital Platforms | 10/2021 - 06/2022</h3>
+            <p>Pixacore - New York, USA (Client: Various Pharma Clients)</p>
+            <ul>
+                <li>Directed a global delivery team of 20+ across time zones to launch and maintain digital platforms for pharma clients.</li>
+                <li>Standardized delivery operations using JIRA and Monday.com, enhancing visibility and process adherence.</li>
+                <li>Drove Agile adoption across teams, leading backlog refinement, retrospectives, and sprint planning sessions.</li>
+                <li>Collaborated with QA and development leads to implement SDLC improvements, reducing delivery delays by 25%.</li>
+            </ul>
+
+            <h3>Portfolio Lead – Digital Transformation | 01/2016 - 10/2021</h3>
+            <p>Tata Consultancy Services - New York, USA (Client: Pfizer)</p>
+            <ul>
+                <li>Oversaw a $5M/year digital program portfolio, managing 100+ web apps, microservices, intranet tools, and chatbots.</li>
+                <li>Delivered enterprise-level digital marketing platforms in compliance with GxP and pharma regulatory standards.</li>
+                <li>Partnered with 15+ business units and agency partners to prioritize roadmaps and deliver strategic initiatives.</li>
+                <li>Identified cost-saving opportunities through automation and modernization, resulting in $3M in client savings.</li>
+                <li>Led application architecture discussions, security reviews, and cloud migration planning with cross-functional teams.</li>
+            </ul>
+
+            <h3>Technical Project Lead | 03/2013 - 12/2015</h3>
+            <p>Tata Consultancy Services - Groton, New York (Client: Pfizer)</p>
+            <ul>
+                <li>Established a global maintenance and enhancement team, scaling it from 0 to 30 members across 5 continents.</li>
+                <li>Delivered 30+ development projects and 500+ enhancement requests annually, generating over $7M in revenue.</li>
+                <li>Designed operational processes adopted across the enterprise for ongoing platform support.</li>
+                <li>Managed change control, documentation, and coordination in line with FDA validation protocols.</li>
+            </ul>
+
+            <h3>Software Developer | 01/2010 - 02/2013</h3>
+            <p>Tata Consultancy Services - Mumbai, India (Client: Pfizer)</p>
+            <ul>
+                <li>Developed and maintained 20+ Drupal web applications, transitioning from ColdFusion to .NET architecture.</li>
+                <li>Built reusable code modules and REST APIs used enterprise-wide for 8+ years.</li>
+                <li>Awarded for service excellence and consistent delivery quality.</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>L N Welingkar Institute of Management Development</strong> - Mumbai, India | Post Graduate Diploma in Business Administration, Operations Management and Supervision, 04/2014</li>
+                <li><strong>Shri Guru Gobind Singhji Institute of Engineering and Technology</strong> - Nanded, India | Bachelor of Technology, Electronics and Telecommunications, 04/2009</li>
+            </ul>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>PMP | PMI</li>
+                <li>Professional Scrum Master (PSM) | Scrum.Org</li>
+                <li>AWS-CCP | AWS</li>
+                <li>PMI-ACP Trained | PMI</li>
+            </ul>
+        </section>
+
+        <!-- LinkedIn -->
+        <section id="contact">
+            <h2>LinkedIn</h2>
+            <p><a href="https://www.linkedin.com/in/mayurkanadkhedkar" target="_blank">https://www.linkedin.com/in/mayurkanadkhedkar</a></p>
+        </section>
+    </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    function scrollToSection(id){
+        document.getElementById(id).scrollIntoView({behavior:'smooth'});
+        if(window.innerWidth < 768) toggleSidebar();
+    }
+
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'pt', 'a4');
+        const content = document.getElementById("resumeContent");
+        doc.html(content, {
+            callback: function(doc) { doc.save("Mayur_Kanadkhedkar_Resume.pdf"); },
+            x: 20,
+            y: 20,
+            html2canvas: { scale: 0.57 }
+        });
+    }
+
+    function toggleSidebar(){
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
