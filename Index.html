@@ -22,7 +22,7 @@
     }
     .sidebar h2 { font-size: 1.5em; margin-bottom: 5px; }
     .sidebar p { font-size: 0.9em; margin-bottom: 20px; color: #ccc; }
-    .sidebar ul { list-style: none; margin-top: 10px; }
+    .sidebar ul { list-style: none; margin-top: 10px; padding-left: 0; }
     .sidebar ul li { margin: 15px 0; }
     .sidebar ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
     .sidebar ul li a:hover { color: #4FC3F7; }
@@ -32,10 +32,13 @@
     section { margin-bottom: 40px; opacity: 0; transform: translateY(20px); transition: all 0.6s ease-in-out; }
     section.visible { opacity: 1; transform: translateY(0); }
     section h2 { font-size: 1.8em; margin-bottom: 15px; border-bottom: 2px solid #4FC3F7; display: inline-block; padding-bottom: 5px; }
-    section ul { list-style: disc inside; margin-top: 10px; }
+    
+    /* Ensure proper bullet indentation */
+    section ul { list-style: disc; padding-left: 20px; margin-top: 10px; }
+    section ul ul { list-style: circle; padding-left: 20px; }
     section ul li { margin-bottom: 10px; }
 
-    /* Skills as colorful tags */
+    /* Skills as two-color tags */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -49,10 +52,8 @@
       color: #fff;
       font-weight: 500;
     }
-    .skills-container span:nth-child(odd) { background-color: #4FC3F7; }
-    .skills-container span:nth-child(even) { background-color: #FF8C42; }
-    .skills-container span:nth-child(3n) { background-color: #6A5ACD; }
-    .skills-container span:nth-child(4n) { background-color: #2E8B57; }
+    .skills-container span:nth-child(odd) { background-color: #4FC3F7; } /* professional blue */
+    .skills-container span:nth-child(even) { background-color: #808080; } /* professional gray */
 
     /* Mobile responsiveness */
     @media(max-width: 768px){
@@ -62,6 +63,9 @@
       .sidebar ul li { margin: 0 15px; }
       .main { margin-left: 0; padding: 20px; }
     }
+
+    a { color: #4FC3F7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -201,14 +205,13 @@
   <script>
     const sections = document.querySelectorAll('section');
     const options = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
           entry.target.classList.add('visible');
         }
       });
     }, options);
-
     sections.forEach(section => observer.observe(section));
   </script>
 </body>
